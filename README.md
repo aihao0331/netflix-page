@@ -15,3 +15,4 @@ Coding Assignment
 // below the image. Clicking on the button should add the title to the “My List” row.
 // The list of titles in the “My List” row should be displayed at the bottom of the page.
 
+npm install before running this project.
