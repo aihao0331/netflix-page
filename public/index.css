@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  background: black;
+}
+
+.header {
+  background-image: url("./background.jpg");
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#netflix-logo {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  width: 180px;
+  height: 120px;
+  fill: red;
+  font-size: 60px;
+}
+
+.main-content {
+  color: white;
+  margin: 20px;
+}
+
+.row {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.row-content {
+  display: flex;
+  overflow-x: scroll;
+  border-top: 1px solid lightgray;
+}
+
+.block {
+  margin: 10px;
+  padding: 5px;
+}
+
+button {
+  display: none;
+  
+}
+
+.block:hover {
+  background: lightseagreen;
+  color: black;
+}
+
+.block:hover button{
+  display: block;
+}
