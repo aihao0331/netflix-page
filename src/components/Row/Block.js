@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Button } from "react-bootstrap";
 
 import * as actions from "../../actions";
 
@@ -23,7 +24,23 @@ class Block extends Component {
       <div className="block">
         <img src={data.img} />
         <div>{data.title}</div>
-        <button onClick={() => this.clickHandler(data)}>{btn}</button>
+        {btn === "Remove" ? (
+          <Button
+            bsStyle="danger"
+            className="block-btn-remove"
+            onClick={() => this.clickHandler(data)}
+          >
+            {btn}
+          </Button>
+        ) : (
+          <Button
+            bsStyle="warning"
+            className="block-btn-add"
+            onClick={() => this.clickHandler(data)}
+          >
+            {btn}
+          </Button>
+        )}
       </div>
     );
   }
