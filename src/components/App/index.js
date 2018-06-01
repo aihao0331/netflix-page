@@ -27,10 +27,10 @@ class App extends Component {
         </div>
         <div class="subheader">
           See What`s next.<p>
-          This is a application to mock the Netflix like page
+          This is a webpage to mock the Netflix like page
           </p>
         </div>
-        <Button bsStyle="danger" className="header-btn"><AnchorLink href='#top'>Start</AnchorLink></Button>
+        <AnchorLink href='#top'><Button bsStyle="danger" className="header-btn">Start</Button></AnchorLink>
         <div className="header-layer" />
         <div className="main-content" id="top">
           <Row type="My List" />

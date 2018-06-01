@@ -105,9 +105,9 @@ a:link, a:visited {
   display: none;
 }
 
-.block:hover {
-  background: lightseagreen;
-  color: black;
+.block:hover img{
+  /* background: lightskyblue; */
+  opacity: .5;
 }
 
 .block button:hover {
