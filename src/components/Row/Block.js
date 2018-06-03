@@ -25,17 +25,17 @@ class Block extends Component {
           <Button
             bsStyle="danger"
             className="block-btn-remove"
-            onClick={() => this.removeHandler(data)}
+            onClick={() => this.addHandler(data)}
           >
-            Remove
+            Add
           </Button>
         ) : (
           <Button
             bsStyle="warning"
             className="block-btn-add"
-            onClick={() => this.addHandler(data)}
+            onClick={() => this.removeHandler(data)}
           >
-            Add
+            Remove
           </Button>
         )}
       </div>

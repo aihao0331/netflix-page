@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Button } from 'react-bootstrap';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { Button } from "react-bootstrap";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import Row from "../Row";
 
@@ -25,15 +25,17 @@ class App extends Component {
           </svg>
         </div>
         <div className="subheader">
-          See What`s next.<p>
-          This is a webpage to mock the Netflix like page
-          </p>
+          See What`s next.<p>This is a webpage to mock the Netflix like page</p>
         </div>
-        <AnchorLink href='#top'><Button bsStyle="danger" className="header-btn">Start</Button></AnchorLink>
+        <AnchorLink href="#top">
+          <Button bsStyle="danger" className="header-btn">
+            Start
+          </Button>
+        </AnchorLink>
         <div className="header-layer" />
         <div className="main-content" id="top">
-          <Row type="My List" isAdd={true}/>
-          <Row type="Recommendation" />
+          <Row type="My List" />
+          <Row type="Recommendation" isAdd={true} />
         </div>
       </div>
     );
