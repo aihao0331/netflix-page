@@ -5,40 +5,37 @@ import { Button } from "react-bootstrap";
 import * as actions from "../../actions";
 
 class Block extends Component {
-  constructor(props) {
-    super(props);
-  }
+  removeHandler = id => {
+    const { dispatch, data } = this.props;
+    dispatch(actions.removeItem(data.id));
+  };
 
-  clickHandler = id => {
-    const { data, btn, dispatch } = this.props;
-    if (btn === "Remove") {
-      dispatch(actions.removeItem(data.id));
-    } else if (btn === "Add") {
-      dispatch(actions.addItem(data));
-    }
+  addHandler = id => {
+    const { dispatch, data } = this.props;
+    dispatch(actions.addItem(data));
   };
 
   render() {
-    const { data, btn } = this.props;
+    const { data, isAdd } = this.props;
     return (
       <div className="block">
-        <img src={data.img} />
+        <img src={data.img} alt="movie-pic" />
         <div>{data.title}</div>
-        {btn === "Remove" ? (
+        {isAdd ? (
           <Button
             bsStyle="danger"
             className="block-btn-remove"
-            onClick={() => this.clickHandler(data)}
+            onClick={() => this.removeHandler(data)}
           >
-            {btn}
+            Remove
           </Button>
         ) : (
           <Button
             bsStyle="warning"
             className="block-btn-add"
-            onClick={() => this.clickHandler(data)}
+            onClick={() => this.addHandler(data)}
           >
-            {btn}
+            Add
           </Button>
         )}
       </div>

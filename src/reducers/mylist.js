@@ -25,16 +25,15 @@ const mylist = (state = initeState, action) => {
         if (obj.id === action.data.id) {
           return state;
         }
-      }  
+      }
       return [...state, action.data];
-      break;
+
     case "REMOVE_ITEM":
       return state.filter(element => element.id !== action.id);
-      break;
+
     default:
       return state;
   }
 };
 
 export default mylist;
-
